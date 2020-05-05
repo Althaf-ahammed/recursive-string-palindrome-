@@ -1,0 +1,17 @@
+def is_palindrome(word):
+    word=word.casefold()
+    length=len(word)
+    if length<1:
+        return True
+    for i in range(length):
+        if(word[i]==word[length-1]):
+            return is_palindrome(word[1:-1])
+        else:
+            return False
+
+#Provide different values for word and test your program
+result=is_palindrome("MadAM")
+if(result):
+    print("The given word is a Palindrome")
+else:
+    print("The given word is not a Palindrome")
